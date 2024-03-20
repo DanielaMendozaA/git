@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicación de Github</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>Explicando algunos conceptos de GITHUB</h1>
+    </header>
+    <main>
+        <section class="primeraSeccion">
+            <div class="primerContenedor">
+                <h2>¿Qué es un commit?</h2>
+                <img src="/images/image.png" alt="commit" class="imgCommit">
+                <article class="primerArticulo">
+                    <div>
+                        <p>
+                            Es una captura instantánea de los cambios que se han realizado en tu proyecto, es decir, cuando haces un commit estás guardando los cambios que has hecho en tu repositorio local.
+                            <span>El comando más comúnmente utilizado para hacer un commit es git commit -m "mensaje descriptivo"</span>
+                        </p>
+                        <p>
+                            Los commits son fundamentales en el uso de Git. Puedes pensar en un commit como una captura de tu proyecto, donde se crea una nueva versión de ese proyecto en el repositorio. Dos características importantes de los commits son:
+                            Puedes recordar los cambios a los que se les hizo commit en una fecha posterior, o revertir el proyecto a esa versión.
+                            Si varios commits editan diferentes partes del proyecto, no se sobrescribirán entre sí aunque los autores de los commits no se conozcan entre sí.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="segundoSeccion">
+            <div class="segundoContenedor">
+                <article class="segundoArticulo">
+                    <div>
+                        <p class="parrafoS1">
+                            Es una versión del repositorio que diverge del tronco principal del trabajo. Las ramas se utilizan para desarrollar características, corregir errores, o experimentar con nuevas ideas en un área contenida de tu repositorio.
+                            Cuando creas un repositorio en GitHub, se crea una rama por defecto llamada “main” o "master". Puedes crear ramas adicionales a partir de cualquier rama existente y cambiar entre ellas para trabajar en diferentes partes de tu proyecto.
+                        </p>
+                        <p class="parafoS2">
+                            Aquí tienes un ejemplo de cómo crear una nueva rama llamada mi-rama y cambiar a ella:
+                            git branch mi-rama
+                            git checkout mi-rama
+                            
+                            El primer comando crea una nueva rama llamada mi-rama. El segundo comando cambia tu espacio de trabajo a la nueva rama.
+                            
+                            Una vez que has terminado de hacer cambios en una rama, puedes fusionarla con otra rama utilizando una solicitud de extracción. Esto te permite revisar y combinar los cambios de una rama con otra de manera ordenada
+                        </p>
+                    </div>
+                </article>
+                <img src="/images/1_DhagidpZutkaCmAZobmzDQ.png" alt="branch" class="imgpush">
+                <h2>
+                    ¿Qué es una rama o branch?
+                </h2>
+            </div>
+        </section>
+        <section>
+            <h2>
+                ¿Qué es y para que sirve Push?
+            </h2>
+            <article>
+                <p>
+                    Es un comando que te permite subir los commits desde tu rama (branch) local en tu repositorio Git local al repositorio remoto. Para poder subir a tu repositorio remoto, debes asegurarte de hacer commit a todos tus cambios al repositorio local.
+                    <span>
+                        La sintaxis de este comando es la siguiente:
+                        <br>
+                        git push (nombre del repositorio) (nombre de la rama)
+                    </span>
+                </p>
+                <p>
+                    Existen diferentes opciones que puedes pasar a este comando. Por ejemplo, si quieres subir todos tus cambios al repositorio remoto con todas sus ramas, puedes utilizar: git push --all (/NOMBRE-REMOTO)
+                    Donde --all es la bandera que señala que quieres subir todas las ramas al repositorio remoto y NOMBRE-REMOTO es el nombre del repositorio remoto al cual las quieres subir.
+                </p>
+                <p>
+                    Si quieres ignorar los cambios locales hechos al repositorio Git en Github, puedes usar el comando --force para subir ignorando esos cambios: git push --force (NOMBRE-REMOTO) (RAMA-REMOTA)
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2>
+                ¿Qué es y para que sirve ADD?
+            </h2>
+            <p>
+                Este comando se utiliza para agregar cambios en el directorio de trabajo al área de preparación (también conocida como índice) para la próxima confirmación. En otras palabras, le dice a Git qué cambios quieres incluir en la próxima confirmación.
+                La sintaxis básica del comando es la siguiente: git add (ruta-del-archivo)
+                Este comando puede ser ejecutado varias veces antes de una confirmación. Sólo agrega el contenido de los archivos especificados al momento que el comando add es ejecutado; si quieres que cambios subsecuentes sean incluidos en la próxima confirmación, entonces debes correr git add nuevamente para agregar el nuevo contenido al índice.
+                El comando git add no agregará archivos ignorados predeterminados. Si cualquier archivo ignorado fue explícitamente especificado en la línea de comandos, git add fallará listando los archivos ignorados.
+                Es importante recordar que antes de poder usar git add, debes tener un repositorio Git local con cambios realizados. Si aún no has hecho cambios, git add no tendrá ningún efecto.
+            </p>
+        </section>
+    </main>
+
+</body>
+</html>
